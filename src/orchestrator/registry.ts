@@ -337,6 +337,8 @@ function getChainById(chainId: number) {
       return chain
     }
   }
+
+  throw new Error(`Unsupported chain: ${chainId}`)
 }
 
 function isTestnet(chainId: number) {
